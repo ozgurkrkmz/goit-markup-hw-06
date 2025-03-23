@@ -387,10 +387,10 @@ address {
 }
 
 @media screen and (min-width: 768px) {
-  .goal-menu-item {
+  .goal-menu-item .team-menu .portfolio-link{
     width: calc((100% - 72px) / 2);
   }
-  .goal-menu {
+  .goal-menu .team-menu .portfolio-menu{
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -413,7 +413,7 @@ address {
 }
 
 @media screen and (min-width: 1158px) {
-  .goal-box {
+  .goal-box .team-box .portfolio-box{
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
@@ -424,12 +424,12 @@ address {
     justify-content: center;
     margin-bottom: 8px;
   }
-  .goal-menu {
+  .goal-menu .team-menu .portfolio-menu{
     flex-direction: row;
     flex-wrap: nowrap;
   }
 
-  .goal-menu-item {
+  .goal-menu-item .team-menu .portfolio-link{
     width: calc((100% - 72px) / 4);
   }
   .container {
