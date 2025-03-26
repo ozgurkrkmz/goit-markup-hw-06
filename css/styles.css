@@ -386,67 +386,93 @@ address {
   color: #434455;
 }
 
+/* Mobile first - single column */
+.goal-menu,
+.team-menu,
+.portfolio-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.goal-menu-item,
+.team-list,
+.portfolio-link {
+  width: 100%;
+}
+
+/* Tablet - two columns */
 @media screen and (min-width: 768px) {
-  .goal-menu-item .team-menu .portfolio-link{
-    width: calc((100% - 72px) / 2);
-  }
-  .goal-menu .team-menu .portfolio-menu{
+  .goal-menu,
+  .team-menu,
+  .portfolio-menu {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 24px;
   }
+
+  .goal-menu-item,
+  .team-list,
+  .portfolio-link {
+    width: calc((100% - 24px) / 2);
+  }
+
   .burger {
     display: none;
   }
+
   .menu {
     display: flex;
   }
+
   .contacts-block {
     display: block;
   }
+
   .contacts-list {
     display: flex;
     flex-direction: column;
   }
+
   .container {
     max-width: 768px;
   }
 }
 
+/* Desktop - full row */
 @media screen and (min-width: 1158px) {
-  .goal-box .team-box .portfolio-box{
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
-    width: 264px;
-    height: 112px;
-    background: #f4f4fd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
-  }
-  .goal-menu .team-menu .portfolio-menu{
+  .goal-menu,
+  .team-menu,
+  .portfolio-menu {
     flex-direction: row;
     flex-wrap: nowrap;
   }
 
-  .goal-menu-item .team-menu .portfolio-link{
+  .goal-menu-item {
     width: calc((100% - 72px) / 4);
   }
+
+  .team-list {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .portfolio-link {
+    width: calc((100% - 48px) / 3);
+  }
+
   .container {
     max-width: 1158px;
   }
-  .contacts-list {
-    gap: 40px;
-  }
-  .contacts-text {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
+
   .contacts-list {
     flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts-text {
+    padding: 24px 0;
   }
 }
-
 /* Our Team */
 .team {
   background: #f4f4fd;
